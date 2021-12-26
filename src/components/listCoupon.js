@@ -23,7 +23,7 @@ function List(props) {
             <>
             <div className="title">COUPONS</div>
             <ul className='list-coupon'>
-                {list.map((coupon,index)=> <li key={index}> {coupon.couponCode}</li>)}
+                {list.map((coupon,index)=> <li key={index}> {coupon.couponCode} <div className='right'><div>Valid Till: {coupon.endDate.split('T')[0]}</div></div></li>)}
             </ul>
             </>
         )
