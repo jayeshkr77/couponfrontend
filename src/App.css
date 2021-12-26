@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap");
+.home-container{
+    display: grid;
+    /* grid-template-columns: auto auto auto; */
+    grid-template-columns: repeat(auto-fill, minmax(1fr, 2fr));
+    grid-gap: 10px 20px;
+    width: 80%;
+    margin: 5% auto;
+    font-family: "Montserrat", sans-serif;
+}
+.home-card{
+    border-radius: 11px;
+    background-color: #FFF;
+    box-shadow: -5px 10px 57px 0 #E3E8FA;
+    padding: 42px 20px 20px;
+    text-align: center;
+    position: relative;
+}
+.create-coupon{
+    grid-row-start:1;
+    grid-row-end:3;
+}
+.apply-coupon {
+    grid-column-start:3;
+    grid-row-start:1 ;
+    grid-row-end:3;
+}
+.display-coupon{
+    grid-column-start:2;
+    grid-column-end: 3;
+}
+
+.field{
+    width: 100%;
+   display: flex;
+   flex-direction: column;
+   margin: 10px 0;
+}
+
+.title{
+    color: #2b4458;
+    opacity: 0.7;
+    margin-bottom: 5px;
+    font-size: 1.8rem;
+    text-align: center;  
+}
+.label{
+    color: #2b4458;
+   opacity: 0.7;
+   margin-bottom: 5px;
+   font-size: 1.2rem;
+   text-align: left;
+}
+.error-label{
+    color: #781c1c;
+   opacity: 0.7;
+   margin-bottom: 5px;
+   font-size: 0.9rem;
+   text-align: right;
+}
+.failure-toast{
+    color: #781c1c;
+    border: 1px solid #781c1c;;
+    border-left:5px solid #781c1c;;
+   /* opacity: 0.7; */
+   margin-bottom: 5px;
+   font-size: 1.2rem;
+   text-align: center;
+   border-radius: 5px;
+   padding: 12px 20px;  
+}
+.success-toast{
+    color: #215924;
+    border: 1px solid #215924;
+    border-left:5px solid #215924;
+   /* opacity: 0.7; */
+   margin-bottom: 5px;
+   font-size: 1.2rem;
+   text-align: center;
+   border-radius: 5px;
+   padding: 12px 20px;
+}
+input, select{
+    width: 100%;
+   border-radius: 5px;
+   border: 2px solid #d3e2ee;
+   padding: 12px 20px;
+   padding-right: 20px;
+   background: #fff;
+   color: #091841;
+   font-weight: 700;
+   font-size: 13px;
+   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+      Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+      Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
+.coupon-create-btn{
+    display: inline-block;
+    width: auto;
+    margin: 0 auto;
+    background: #091841;
+    color: #fff;
+    padding: 15px 40px;
+    border-radius: 5px;
+    opacity: 0.9;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.loader {
+    margin: 12% 40%;
+    position: relative;
+  }
+  .loader:before {
+    border-radius: 50%;
+    background-color: #d3e2ee;
+    animation: loader 3s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+    content: '';
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+  @keyframes loader {
+    0% {
+      transform: translateX(0) scale(1);
+    }
+    25% {
+      transform: translateX(-100%) scale(0.3);
+    }
+    50% {
+      transform: translateX(0) scale(1);
+    }
+    75% {
+      transform: translateX(100%) scale(0.3);
+    }
+    100% {
+      transform: translateX(0) scale(1);
+    }
+  }
+
+.list-coupon{
+  list-style: none;
+}
+.list-coupon li{
+  text-align:left;
+  padding: 2px 2px;
+  border-bottom: 1px solid #d3e2ee;
+}
+.reciet{
+  text-align: left;
+}
+.right{
+  float:right;
+}
+
+/* landscape tablets, phones and below */
+@media only screen and (max-width: 992px) {
+  .home-container{
+    grid-template-columns: 100% 100%;
+
+}
+.create-coupon{
+  grid-row-start:1;
+  grid-row-end:2;
+}
+.display-coupon{
+  grid-column-start:1;
+  grid-column-end:2;
+  grid-row-start:2;
+  grid-row-end:3;
+}
+
+.cart{
+  grid-column-start:1;
+  grid-row-start:3 ;
+  grid-row-end:4;
+}
+.apply-coupon {
+  grid-column-start:1;
+  grid-row-start:4 ;
+  grid-row-end:5;
+}
+}
+  
