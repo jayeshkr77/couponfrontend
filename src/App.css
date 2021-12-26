@@ -163,6 +163,9 @@ input[type=number] {
 .right{
   float:right;
 }
+.date{
+  font-size: 0.7rem;
+}
 
 /* landscape tablets, phones and below */
 @media only screen and (max-width: 992px) {
